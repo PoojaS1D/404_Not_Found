@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap');
+
+*{
+    margin:0;   /*extra space around an elements border ( it controls the space outside an element*/
+    padding: 0;   /*space within an element */
+    box-sizing: border-box; /* box-sizing : it allows to include the padding and border in an element's total width and height */
+    /* content-box : if the width of the element is 100px then,  the element's content-box will be 100 px wide and width of border or padding will be added to the final width (making the width wider than 100px)*/
+    /* border-box : if the width of the element is 100px then, tat 100px will include the border and padding added, width will shrink to absorb those extra width */
+}
+
+body{
+    max-width: 1440px ; /*sets the maximum width of an element ( element = body (here)) */
+    margin: 0 auto;  /* example : margin: 10px, 20px, 15px, 5px; 10px --> top , 20px --> right, 15px ---> bottom,  5px ---> left*/
+}/* here, auto: right and left margins are auto ( browser sets the margin) and 0: top and bottom margins are 0*/
+
+.container{
+    width:80%;  /* sets an element's width (here, width of the container)*/
+    margin: 0 auto;  /* margin of the container */
+}
+
+h2{
+    font-size: 24px;
+    font-family: 'Inconsolata', 'monospace';
+    font-weight: 700, bold;  /*it sets the  weight or boldness of the font */
+    font-style: normal;
+    padding: 25px; /* In padding , the border ain't stretch till vertical end */
+    /*line-height: 25.18px;  line height has no problem like padding , border will be tall as line height */
+    text-transform: uppercase;  /* to capitalize the h2 text*/
+   letter-spacing: -8%; /* sets the horizontal spacing between the characters*/
+}
+
+.content-container{
+    margin-top: 50px;
+    display: flex; /* sets whether an element is treated as a block or inline element and the layout used for its children, such as flow layout, grid or flex.*/
+    /*aims at providing a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic*/
+    justify-content: space-between;  /* distributes the space between and around the content items along with the main axis( direction set by the flex-direction property( like row or row-reverse or column or column-reverse) of a flex container, and the inline axis of the grid container  */
+    align-items: center;
+}
+
+.content-img img{
+    width:539px;
+    height: 447px;
+    margin-left: 77px;
+}
+.content-info h1{
+    font-family: 'Space Mono', monospace;
+    font-weight: 700 bold;
+    font-style: normal;
+    font-size:64px ;
+    color:#333333;
+    line-height:94.78px ;
+    letter-spacing: -3.5%;
+}
+
+.content-info p{
+    margin-top: 36px;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    line-height: 35.54px;
+    letter-spacing: -3.5%;
+}
+button{
+    all:unset; /* resets all of an element's properties to their initial or inherited values, or to the values specified in another stylesheet origin except some*/
+    margin-top: 30px;
+    background: #333333;
+    font-family: 'Space Mono', monospace;
+    color:#fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 23px 43px;
+    cursor: pointer;
+}
+
+footer{
+    margin-top:100px ;
+    text-align: center;
+    padding:20px;
+}
+
+@media screen and (max-width: 480px){
+    .content-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content-img img{
+        width: 286.83px;
+        height:238px;
+}
+
+.content-info h1{
+    margin-top: 50px ;
+    font-size: 48px;
+}
+}
